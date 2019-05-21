@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e388adf-48ba-4456-ad42-eb43219cf2d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/page/blog_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page/cs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page/css/blog_detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page/js/blog_detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/MyUtil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/BlogDao.js" beforeDir="false" afterPath="$PROJECT_DIR$/dao/BlogDao.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/page/js/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/page/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/BlogController.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/BlogController.js" afterDir="false" />
-    </list>
+    <list default="true" id="5e388adf-48ba-4456-ad42-eb43219cf2d7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -86,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/js/blog_detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+            <state relative-caret-position="207">
+              <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -190,11 +174,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="778" />
-    <option name="y" value="16" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="512" />
+    <option name="y" value="13" />
     <option name="width" value="1235" />
-    <option name="height" value="983" />
+    <option name="height" value="984" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -323,12 +307,12 @@
       <workItem from="1558150804273" duration="11571000" />
       <workItem from="1558221149906" duration="15308000" />
       <workItem from="1558313471979" duration="25222000" />
-      <workItem from="1558397757990" duration="10956000" />
+      <workItem from="1558397757990" duration="11570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120872000" />
+    <option name="totallyTimeSpent" value="121486000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -340,7 +324,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="623" y="13" width="988" height="786" extended-state="0" />
+    <frame x="410" y="11" width="988" height="787" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -348,7 +332,7 @@
       <window_info content_ui="combo" id="Project" order="2" weight="0.24789916" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34250763" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34198472" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -720,8 +704,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/js/blog_detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        <state relative-caret-position="207">
+          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
         </state>
       </provider>
     </entry>
