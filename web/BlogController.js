@@ -30,7 +30,7 @@ function queryBlogByPage(request, response) {
         for (var i = 0 ; i < result.length ; i ++) {
             result[i].content = result[i].content.replace(/<img[\w\W]*">/, "");
             result[i].content = result[i].content.replace(/<[\w\W]{1,5}>/g, "");
-            result[i].content = result[i].content.substring(0, 300);  //截断,最多三百
+            result[i].content = result[i].content.substring(0, 300);
         }
         response.writeHead(200);
         response.write(respUtil.writeResult("success", "查询成功", result));

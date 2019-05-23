@@ -57,7 +57,6 @@ var articleList = new Vue({
                     method: "get",
                     url:"/queryBlogByPage?page=" + (page - 1) + "&pageSize=" + pageSize
                 }).then(function(resp){
-<<<<<<< HEAD
                     var result = resp.data.data;//返回的数据转换成对象
                     var list = []
                     for(var i = 0;i < result.length;i++){
@@ -73,9 +72,7 @@ var articleList = new Vue({
                     }
                     articleList.articleList = list;
                     articleList.page = page
-=======
                     console.log(resp);
->>>>>>> 5bf378f0f252589487b2a7503b805c4f6c6f6343
                 }).catch(function(resp){
                     console.log("请求错误");
                 });
@@ -119,3 +116,119 @@ var articleList = new Vue({
         this.getPate(this.page,this.pageSize);
     }
 });
+
+var oImgCarousel = $(".carousel img")
+var oDivCarousel = $ (".carousel .carousel-hr")
+var a = oImgCarousel[0]
+var d = oImgCarousel[1]
+var b = oDivCarousel[0]
+var targetObj = {
+	targetObj2 : {
+		opacity: 0
+},
+	targetObj3 : {
+		opacity: 1
+	}
+}
+
+startWidth(b,window.innerWidth,targetObj)
+function startWidth(obj,target,targetObj){
+	obj.style.width = 0 + 'px';
+	//清理
+	clearInterval(obj.timer);
+	var iSpeed,
+		num = 0;
+	obj.timer = setInterval(function(){
+	  iSpeed = (target - obj.offsetWidth) / 3;
+	  iSpeed = iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+	if(obj.offsetWidth >= target*0.99 && num == 0){
+		num = 1
+		if(getStyle(a,'opacity') == 1 && getStyle(d,'opacity') == 0){
+			startMove(d,targetObj.targetObj3,function(){
+					StartMove(a,targetObj.targetObj2)
+				})
+			}else if(getStyle(a,'opacity') == 0 && getStyle(d,'opacity') == 1){
+				startMove(a,targetObj.targetObj3,function(){
+						StartMove(d,targetObj.targetObj2)
+				})
+			}
+	}
+	if(obj.offsetWidth >= target){
+		obj.style.width = 0 + 'px';
+		console.log(num)
+		num = 0
+	}else{
+	  obj.style.width = obj.offsetWidth + 5 + 'px';
+	}
+	},20)
+}
+function getStyle(obj, attr) {
+	if (obj.currentStyle) {
+		return obj.currentStyle[attr];
+	} else {
+		return window.getComputedStyle(obj, false)[attr];
+	}
+}
+function startMove(obj,json,callback){
+	clearInterval(obj.timer);
+	var iSpeed,
+		iCur;
+	obj.timer = setInterval(function(){
+		var bStopA = true;
+		for(var attr in json){
+		   if(attr == 'opacity'){
+			   iCur = parseFloat(getStyle(obj,attr))*100;
+		   }else{
+			   iCur = parseInt(getStyle(obj,attr));
+		   }
+		   iSpeed = (json[attr] - iCur)/7;                
+			json[attr] == 1 ? iSpeed = 2:Math.floor(iSpeed)
+		   if(attr == 'opacity'){
+			if(getStyle(obj,attr) >= 1){
+				obj.style.opacity = 1
+				break;
+			   }else{
+				obj.style.opacity = (iCur + iSpeed)/100;
+			   }
+		   }else{
+			   obj.style[attr] = iCur + iSpeed + 'px';
+		   }
+		   if(iCur != json[attr]){
+			   bStopA = false;
+		   }
+		} 
+		if(bStopA){
+			clearInterval(obj.timer);
+		   typeof callback == 'function'? callback():'';
+		}
+	},5);
+}
+function StartMove(obj,json,callback){
+	clearInterval(obj.timer);
+	var iSpeed,
+		iCur;
+	obj.timer = setInterval(function(){
+		var bStop = true;
+		for(var attr in json){
+		   if(attr == 'opacity'){
+			   iCur = parseFloat(getStyle(obj,attr))*100;
+		   }else{
+			   iCur = parseInt(getStyle(obj,attr));
+		   }
+		   iSpeed = (json[attr] - iCur)/7;
+		   iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+		   if(attr == 'opacity'){
+				obj.style.opacity = (iCur + iSpeed)/100;
+		   }else{
+			   obj.style[attr] = iCur + iSpeed + 'px';
+		   }
+		   if(iCur != json[attr]){
+			   bStop = false;
+		   }
+		} 
+		if(bStop){
+			clearInterval(obj.timer);
+		   typeof callback == 'function'? callback():'';
+		}
+	},3);
+}

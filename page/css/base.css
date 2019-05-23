@@ -11,7 +11,7 @@ body{
 .header{
     width: 100%;
     height: 50px;
-    background: #191818;
+    background: #fff;
 }
 .container{
     position: relative;
@@ -22,7 +22,7 @@ body{
 .title{
     display:inline-block;
     float: left;
-    color: #eeeeee;
+    color: #999;
     line-height: 50px;
     text-decoration: none;
     margin: 0px 15px;
@@ -38,11 +38,15 @@ body{
     width: 58px;
     font-size: 14px;
     line-height: 50px;
-    color: #eeeeee;
+    color: #000;
 }
 .menu > li > a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
+}
+.menu > li > a:hover {
+   color: #f40;
+   border-bottom: 1px solid #f40;
 }
 .search_bar > input {
     display: inline-block;

@@ -3,8 +3,11 @@
     width: 96%;
     text-align: left;
     border-radius: 5px;
+    border-radius: 0.5rem;
     box-shadow: 3px 4px 3px #888;
+    box-shadow: 0.3rem 0.4rem 0.3rem #888;
     padding: 10px 15px;
+    padding: 1rem 1.5rem;
 }
 .every_day:before{
     content: '';
@@ -92,10 +95,49 @@
 }
 .article_foot_p1{
     position: absolute;
-    left：0px;
+    left: 0px;
 }
 .article_foot_p2{
     position: absolute;
     right: 45px;
 
+}
+
+/* 导航轮播图 */
+.carousel{
+    display: inline-block;
+    padding-top: 84px;
+    padding-top: 8.4rem;
+    width: 100%;
+    height: 915px;
+    position: relative;
+}
+/* @media (max-width:1536px){
+    .carousel{
+        height: 720px;
+    }
+} */
+.carousel img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.carousel .carousel-bj1{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.carousel .carousel-bj2{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.carousel .carousel-hr{
+    position: absolute;
+    bottom: 0;
+    width: 0px;
+    height: 5px;
+    height: 0.5rem;
+    background: #e57c09;
+    z-index: 2;
 }

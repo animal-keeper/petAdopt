@@ -11,7 +11,11 @@ app.get("/queryBlogByPage",loader.get("/queryBlogByPage"));
 
 app.get("/queryBlogCount", loader.get("/queryBlogCount"));
 app.get("/queryBlogById", loader.get("/queryBlogById"));
-// app.get("/queryBlogByPage", loader.get("/queryBlogByPage"));
+
+app.get("/addComment", loader.get("/addComment"));
+
+app.get("/queryRandomCode", loader.get("/queryRandomCode"));
+app.get("/queryCommentsByBlogId", loader.get("/queryCommentsByBlogId"));
 app.listen(globalConfig.port,function(){
     console.log("服务器已启动");
 });

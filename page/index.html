@@ -14,12 +14,22 @@
         <div class="container">
             <a class="title">宠物领养</a>
             <ul class="menu">
-                <li><a href="/">首页</a></li>
-                <li><a href="/slte.html">防骗助手</a></li>
-                <li><a href="/">关于</a></li>
-                <li><a href="/">留言</a></li>
-                <li><a href="/">百科</a></li>
-                <li><a href="/">领养须知</a></li>
+                <li>
+                    <a href="/">首页</a>
+                    <div class="top-hr"></div>
+                <div class="top-hr"></div></li>
+                <li>
+                    <a href="/slte.html">防骗助手</a>
+                    <div class="top-hrs"></div>
+                </li>
+                <li>
+                    <a href="/">百科</a>
+                    <div class="top-hrs"></div>
+                </li>
+                <li>
+                    <a href="/">领养须知</a>
+                    <div class="top-hrs"></div>
+                </li>
             </ul>
             <div class="search_bar">
                 <input type="text" placeholder="输入关键词查找">
@@ -27,6 +37,12 @@
             </div>
         </div>
     </header>
+    <!-- 导航轮播图 -->
+    <div class="carousel" style="height: 701px;">
+            <img class="carousel-bj1" src="../page/img/bj.jpg" alt="" style="opacity: 1;">
+            <img class="carousel-bj2" src="../page/img/bj2.jpg" alt="" style="opacity: 0;">
+            <div class="carousel-hr" id="content" style="width: 475px;"></div>
+    </div>
     <div class="content">
         <div class="content_left">
             <div class="every_day" id="every_day">
@@ -37,7 +53,7 @@
             <div class="article_list" id="article_list">
                 <div class="article" v-for="(article, index) in articleList" :key="index">
                     <div class="article_box">
-                        <img class="article_img" :src="article.img"/>
+                        <!--<img class="article_img" :src="article.img"/>-->
                         <div class="article_right">
                             <a v-bind:href="article.link" class="article_title">{{ article.title }}</a>
                             <p class="article_content">
@@ -89,34 +105,6 @@
                         </div>
                         <p>{{comment.comment}}</p>
                     </li>
-                   <!--<li>-->
-                       <!--<div>-->
-                           <!--<span>这里是可爱猿的动物园</span>-->
-                           <!--<span class="pull_right">这里是时间</span>-->
-                       <!--</div>-->
-                       <!--<p>可爱猿</p>-->
-                   <!--</li>-->
-                    <!--<li>-->
-                        <!--<div>-->
-                            <!--<span>这里是可爱猿的动物园</span>-->
-                            <!--<span class="pull_right">这里是时间</span>-->
-                        <!--</div>-->
-                        <!--<p>可爱猿</p>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div>-->
-                            <!--<span>这里是可爱猿的动物园</span>-->
-                            <!--<span class="pull_right">这里是时间</span>-->
-                        <!--</div>-->
-                        <!--<p>可爱猿</p>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<div>-->
-                            <!--<span>这里是可爱猿的动物园</span>-->
-                            <!--<span class="pull_right">这里是时间</span>-->
-                        <!--</div>-->
-                        <!--<p>可爱猿</p>-->
-                    <!--</li>-->
                 </ul>
             </div>
             <div class="right_moodule">
@@ -144,7 +132,10 @@
         </ul>
         <p>Copyright @ 2010-2017dfasdfsdf</p>
     </footer>
+    <script src="../util/jquery.js"></script>
+    <script src="../util/MyUtil.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/base.js"></script>
+    
 </body>
 </html>
