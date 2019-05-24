@@ -73,7 +73,7 @@
         border-radius: 3px;
     }
     .register-box > div:last-child {
-        margin-top: 40px;
+        margin-top: 30px;
         cursor: pointer;
         text-align: center;
     }
@@ -96,11 +96,18 @@
     .is-available {
         cursor: not-allowed;
     }
+    .have-user {
+        color: #fff;
+        cursor: pointer;
+        text-align: center;
+        font-size: 12px;
+    }
 </style>
 <body>
     <div class="container" id="register">
         <div class="register-box">
             <h2>欢迎注册宠物领养网!</h2>
+            <p class="have-user" @click="goLogin">已有账号?去登录</p>
             <div> 
                 <span>用户名:</span>
                 <input type="text" placeholder="请输入用户名" v-model="username">

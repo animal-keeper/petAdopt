@@ -13,6 +13,9 @@ var register = new Vue({
                 type: type
             })
         },
+        goLogin() {
+            window.location.href = 'http://localhost:12306/login.html'
+        },
         submit() {
             if (this.isAccept) {
                 if (!this.username) {
