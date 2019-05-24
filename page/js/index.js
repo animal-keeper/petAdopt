@@ -57,7 +57,6 @@ var articleList = new Vue({
                     method: "get",
                     url:"/queryBlogByPage?page=" + (page - 1) + "&pageSize=" + pageSize
                 }).then(function(resp){
-<<<<<<< HEAD
                     var result = resp.data.data;//返回的数据转换成对象
                     var list = []
                     for(var i = 0;i < result.length;i++){
@@ -73,9 +72,6 @@ var articleList = new Vue({
                     }
                     articleList.articleList = list;
                     articleList.page = page
-=======
-                    console.log(resp);
->>>>>>> 5bf378f0f252589487b2a7503b805c4f6c6f6343
                 }).catch(function(resp){
                     console.log("请求错误");
                 });

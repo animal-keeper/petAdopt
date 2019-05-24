@@ -45,18 +45,30 @@ var register = new Vue({
                     }
                 }
                 // 向后台发送请求
+                var that = this
                 const data = {
                     username: this.username,
                     password: this.password,
                     tel_number: this.telNumber
                 }
-                console.log(this.username)
-                console.log(this.password)
-                console.log(this.telNumber)
+                console.log(data)
+                axios({
+                    url: '/register',
+                    method: 'post',
+                    data: data
+                }).then(res => {
+                    console.log(res)
+                    if (res.status !== 200) {
+                        that.tip(res.data.msg, res.data.status)
+                    } else {
+                        that.tip(res.data.msg, res.data.status)
+                        // 跳转到登录页面
+                    }
+                }).catch(err => {
+                    console.log(err)
+                    that.tip('出错了', 'error')                 
+                })
             }
         }
-    },
-    created() {
-        console.log(1)
     }
 })
