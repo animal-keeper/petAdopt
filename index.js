@@ -2,7 +2,7 @@ var express = require("express");//引入express
 var globalConfig = require("./config");
 var loader = require("./loder");
 var app = new express();//new express对象
-app.use(express.static("./page/"));//设置静态文件的位置 express 默认找到index.html
+app.use(express.static("./page/", {index: 'login.html'}));
 app.post('/register', loader.get('/register'))
 app.post('/login', loader.get('/login'))
 app.post('/admin', loader.get('/admin'))
