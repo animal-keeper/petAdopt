@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>宠物领养网注册</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./js/axios.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 </head>
 <style>
     * {
@@ -69,7 +73,7 @@
         border-radius: 3px;
     }
     .register-box > div:last-child {
-        margin-top: 40px;
+        margin-top: 30px;
         cursor: pointer;
         text-align: center;
     }
@@ -89,32 +93,43 @@
         vertical-align: top;
         font-size: 12px;
     }
+    .is-available {
+        cursor: not-allowed;
+    }
+    .have-user {
+        color: #fff;
+        cursor: pointer;
+        text-align: center;
+        font-size: 12px;
+    }
 </style>
 <body>
-    <div class="container">
+    <div class="container" id="register">
         <div class="register-box">
             <h2>欢迎注册宠物领养网!</h2>
+            <p class="have-user" @click="goLogin">已有账号?去登录</p>
             <div> 
                 <span>用户名:</span>
-                <input type="text" placeholder="请输入用户名">
+                <input type="text" placeholder="请输入用户名" v-model="username">
             </div>
             <div>
                 <span>手机号:</span>
-                <input type="text" placeholder="请输入手机号">
+                <input type="text" placeholder="请输入手机号" v-model="telNumber">
             </div>
             <div>
                 <span>密&nbsp;&nbsp;&nbsp;码:</span>
-                <input type="password" placeholder="请输入密码">
+                <input type="password" placeholder="请输入密码" v-model="password">
             </div>
             <div>
-                <input type="checkbox">
+                <input type="checkbox" v-model="isAccept">
                 <span>阅读并接受</span>
                 <span>《宠物领养网协议》</span>
             </div>
             <div>
-                <span>注册</span>
+                <span :class="{ 'is-available': !isAccept }" @click="submit">注册</span>
             </div>
         </div>
     </div>
+    <script src="./js/register.js"></script>
 </body>
 </html>

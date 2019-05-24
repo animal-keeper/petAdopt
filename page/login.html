@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>宠物领养网登录</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+    #wrapper {
+        width: 100%;
+        height: 100%;
+        background-image: url('./img/timg (5).gif');
+        background-size: 34% 34%;
+    }
+    .card {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 300px;
+        padding: 20px 10px;
+    }
+    .card .select-user {
+        text-align: center;
+    }
+    .card .select-user span {
+        display: inline-block;
+        cursor: pointer;
+        margin: 0 10px;
+        padding: 5px 10px;
+        border-radius: 3px;
+        border: 1px solid #DCDFE6;
+        color: #606266;
+        font-size: 14px;
+    }
+    .card .select-user span.active {
+        color: #fff;
+        background-color: #409EFF;
+        border-color: #409EFF;
+    }
+    .card input {
+        height: 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        padding: 0 10px;
+    }
+    .card .username span,
+    .card .password span {
+        display: inline-block;
+        width: 80px;
+        text-align: right;
+    }
+    .card .username,
+    .card .password {
+        width: 300px;
+        margin: 30px auto;
+    }
+    .card div:nth-of-type(4) {
+        width: 300px;
+        margin: 30px auto;
+        text-align: center;
+    }
+    .card .login {
+        margin-left: 20px;
+    }
+</style>
+<body>
+    <div id="wrapper">
+        <el-main>
+            <el-card class="card">
+                <div class="select-user">
+                    <span :class="{ active: !isAdmin }" @click="selectUser('user')">用户登录</span>
+                    <span :class="{ active: isAdmin }" @click="selectUser('admin')">管理员登录</span>
+                </div>
+                <div class="username">
+                    <span>用户名：</span>
+                    <input type="text" placeholder="请输入用户名(手机号)" v-model="userName">
+                </div>
+                <div class="password">
+                    <span>密&nbsp;&nbsp;&nbsp;码：</span>
+                    <input type="password" placeholder="请输入密码" v-model="password" @keydown.enter="login">
+                </div>
+                <div>
+                    <el-button class="login" @click="login">登录</el-button>
+                    <el-button class="register" @click="goRegister">注册</el-button>
+                </div>
+            </el-card>
+        </el-main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="./js/axios.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
