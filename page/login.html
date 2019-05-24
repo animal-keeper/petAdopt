@@ -33,8 +33,23 @@
         height: 300px;
         padding: 20px 10px;
     }
-    .card h3 {
+    .card .select-user {
         text-align: center;
+    }
+    .card .select-user span {
+        display: inline-block;
+        cursor: pointer;
+        margin: 0 10px;
+        padding: 5px 10px;
+        border-radius: 3px;
+        border: 1px solid #DCDFE6;
+        color: #606266;
+        font-size: 14px;
+    }
+    .card .select-user span.active {
+        color: #fff;
+        background-color: #409EFF;
+        border-color: #409EFF;
     }
     .card input {
         height: 35px;
@@ -54,7 +69,7 @@
         width: 300px;
         margin: 30px auto;
     }
-    .card div:nth-of-type(3) {
+    .card div:nth-of-type(4) {
         width: 300px;
         margin: 30px auto;
         text-align: center;
@@ -67,7 +82,10 @@
     <div id="wrapper">
         <el-main>
             <el-card class="card">
-                <h3>用户登录</h3>
+                <div class="select-user">
+                    <span :class="{ active: !isAdmin }" @click="selectUser('user')">用户登录</span>
+                    <span :class="{ active: isAdmin }" @click="selectUser('admin')">管理员登录</span>
+                </div>
                 <div class="username">
                     <span>用户名：</span>
                     <input type="text" placeholder="请输入用户名(手机号)" v-model="userName">

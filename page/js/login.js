@@ -2,7 +2,9 @@ var login = new Vue({
     el: '#wrapper',
     data: {
         userName: '',
-        password: ''
+        password: '',
+        isAdmin: false,
+        requestUrl: ''
     },
     methods: {
         tip(msg, type) {
@@ -10,6 +12,13 @@ var login = new Vue({
                 message: msg,
                 type: type
             })
+        },
+        selectUser(people) {
+            if (people === 'user') {
+                this.isAdmin = false
+            } else if (people === 'admin') {
+                this.isAdmin = true
+            }
         },
         login () {
             if (!this.userName) {
@@ -33,7 +42,7 @@ var login = new Vue({
             console.log(data)
             var that = this
             axios({
-                url: '/login',
+                url: that.isAdmin ? '/admin' : '/login',
                 method: 'post',
                 data: data
             }).then(res => {
@@ -43,9 +52,14 @@ var login = new Vue({
                     that.tip('出错了', 'error')
                 } else {
                     if (res.data.msg === '登录成功') {
-                        localStorage.userId = data.user_id
-                        localStorage.userName = data.user_name
-                        window.location.href = 'http://localhost:12306/index.html'
+                        if (that.isAdmin) {
+                            localStorage.adminId = data.admin_id
+                            window.location.href = ''
+                        } else {
+                            localStorage.userId = data.user_id
+                            localStorage.userName = data.user_name
+                            window.location.href = 'http://localhost:12306/index.html'
+                        }
                     } else {
                         that.tip(res.data.msg, res.data.status)
                     }
