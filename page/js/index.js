@@ -24,6 +24,9 @@ var everyDay = new Vue({
         });
     }
 });
+// var search = new Vue{
+//
+// }
 var articleList = new Vue({
     el:"#article_list",
     data:{
@@ -32,15 +35,15 @@ var articleList = new Vue({
         count : 100,
         pageNumList:[],
         articleList:[{
-            name:"小猿",
-            title:"一个月小橙猫，颜值高，求包养",
-            img:"img/IMG_20190510_201204.jpg",
-            content:" 长毛小帅哥，无辜的大眼睛，性格比较胆小，只喜欢猫粮，所以不用担心和你抢肉吃，哈哈。想找个有耐心责任心的铲屎官",
-            data: "2019-05-11",
-            views:"101",
-            tags:"test1 test2",
-            id:"1",
-            link:""
+            // name:"小猿",
+            // title:"一个月小橙猫，颜值高，求包养",
+            // img:"img/IMG_20190510_201204.jpg",
+            // content:" 长毛小帅哥，无辜的大眼睛，性格比较胆小，只喜欢猫粮，所以不用担心和你抢肉吃，哈哈。想找个有耐心责任心的铲屎官",
+            // data: "2019-05-11",
+            // views:"101",
+            // tags:"test1 test2",
+            // id:"1",
+            // link:""
         }
         ]
     },
@@ -48,44 +51,85 @@ var articleList = new Vue({
     computed: {
         jumpTo: function() {
             return function (page) {
-                this.getPate(page, this.pageSize);
+                this.getPage(page, this.pageSize);
             }
         },
-        getPate: function(){
-            return function(page,pageSize){
-                axios({//发请求
-                    method: "get",
-                    url:"/queryBlogByPage?page=" + (page - 1) + "&pageSize=" + pageSize
-                }).then(function(resp){
-                    var result = resp.data.data;//返回的数据转换成对象
-                    var list = []
-                    for(var i = 0;i < result.length;i++){
-                        var temp = {};
-                        temp.title = result[i].title;
-                        temp.content = result[i].content;
-                        temp.date = result[i].ctime;
-                        temp.views = result[i].views;
-                        temp.tags = result[i].tags;
-                        temp.id = result[i].id;
-                        temp.link = "/blog_detail.html?bid=" + result[i].id;
-                        list.push(temp);
+        getPage: function() {
+            return function (page, pageSize) {
+                var searcheUrlParams = location.search.indexOf("?") > -1 ? location.search.split("?")[1].split("&") : "";
+                var tag = "";
+                for (var i = 0 ; i < searcheUrlParams.length ; i ++) {
+                    if (searcheUrlParams[i].split("=")[0] == "tag") {
+                        try {
+                            tag = searcheUrlParams[i].split("=")[1];
+                        }catch (e) {
+                            console.log(e);
+                        }
                     }
-                    articleList.articleList = list;
-                    articleList.page = page
-                    console.log(resp);
-                }).catch(function(resp){
-                    console.log("请求错误");
-                });
+                }
+                if (tag == "") {//不是查询情况
+                    axios({
+                        method: "get",
+                        url: "/queryBlogByPage?page=" + (page - 1) + "&pageSize=" + pageSize
+                    }).then(function(resp) {
+                        var result = resp.data.data;
+                        var list = [];
+                        for (var i = 0 ; i < result.length ; i ++) {
+                            var temp = {};
+                            temp.title = result[i].title;
+                            temp.content = result[i].content;
+                            temp.date = result[i].ctime;
+                            temp.views = result[i].views;
+                            temp.tags = result[i].tags;
+                            temp.id = result[i].id;
+                            temp.link = "/blog_detail.html?bid=" + result[i].id;
+                            list.push(temp);
+                        }
+                        articleList.articleList = list;
+                        articleList.page = page;
+                    }).catch(function (resp) {
+                        console.log("请求错误");
+                    });
+                    axios({
+                        method: "get",
+                        url: "/queryBlogCount"
+                    }).then(function(resp) {
+                        articleList.count = resp.data.data[0].count;
+                        articleList.generatePageTool;
+                    });
+                } else {
+                    axios({
+                        method: "get",
+                        url: "/queryByTag?page=" + (page - 1) + "&pageSize=" + pageSize + "&tag=" + tag
+                    }).then(function(resp) {
+                        var result = resp.data.data;
+                        var list = [];
+                        for (var i = 0 ; i < result.length ; i ++) {
+                            var temp = {};
+                            temp.title = result[i].title;
+                            temp.content = result[i].content;
+                            temp.date = result[i].ctime;
+                            temp.views = result[i].views;
+                            temp.tags = result[i].tags;
+                            temp.id = result[i].id;
+                            temp.link = "/blog_detail.html?bid=" + result[i].id;
+                            list.push(temp);
+                        }
+                        articleList.articleList = list;
+                        articleList.page = page;
 
-                axios({
-                    method: "get",
-                    url: "/queryBlogCount" +
-                        "" +
-                        ""
-                }).then(function(resp) {
-                    articleList.count = resp.data.data[0].count;
-                    articleList.generatePageTool;
-                });
+                    }).catch(function (resp) {
+                        console.log("请求错误");
+                    });
+
+                    axios({
+                        method: "get",
+                        url: "/queryByTagCount?tag=" + tag
+                    }).then(function(resp) {
+                        articleList.count = resp.data.data[0].count;
+                        articleList.generatePageTool;
+                    });
+                }
             }
         },
         generatePageTool: function () {
@@ -110,13 +154,19 @@ var articleList = new Vue({
             result.push({text:">>", page: parseInt((totalCount + pageSize - 1) / pageSize)});
             this.pageNumList = result;
             return result;
-        }
+        },
+
     },
     created:function(){
-        this.getPate(this.page,this.pageSize);
+        this.getPage(this.page,this.pageSize);
+    },
+    methods:{
+        search:function(){
+            console.log(8,this.articleList)
+        }
     }
-});
 
+});
 var oImgCarousel = $(".carousel img")
 var oDivCarousel = $ (".carousel .carousel-hr")
 var a = oImgCarousel[0]
@@ -155,7 +205,7 @@ function startWidth(obj,target,targetObj){
 	}
 	if(obj.offsetWidth >= target){
 		obj.style.width = 0 + 'px';
-		console.log(num)
+		// console.log(num)
 		num = 0
 	}else{
 	  obj.style.width = obj.offsetWidth + 5 + 'px';
@@ -232,3 +282,27 @@ function StartMove(obj,json,callback){
 		}
 	},3);
 }
+//轮播图
+var oDiv = document.getElementsByClassName('lunbo1')[0]
+var person = [{name:'01',src:'../img/IMG_20190510_204521.jpg'},{name:'02',src:'../img/IMG_20190510_201204.jpg'}]
+function render(list,index){
+    var str = ''
+    str = ' <img style="width:90%;height:90%" src=" '+ list[index].src + '" alt="">\
+            <div class="leaf">\
+                <div class="leaf-left">'+ list[index].name +'/</div>\
+                <div class="leaf-right">02</div>\
+            </div>'
+    oDiv.innerHTML = str;
+}
+var index = 0
+render(person,0);
+var timer = setInterval(function(){
+    if(index == 0){
+        // render(person,index)
+        index = 1
+    }else{
+        // render(person,index)
+        index = 0
+    }
+    render(person,index)
+},3000)

@@ -3,7 +3,6 @@ var dbutil = require("./DBUtil");
 function queryBlogByPage(page,pageSize,success) {
     var insertSql = "select * from blog order by id desc limit ?, ?:";
     var params = [page * pageSize, pageSize];
-
     var connection = dbutil.createConnection();
     connection.connect();
     connection.query(insertSql, params, function (error, result) {
@@ -16,9 +15,9 @@ function queryBlogByPage(page,pageSize,success) {
     connection.end();
 }
 
-function insertBlog(title,views,tags,ctime, utime,content,success) {
-    var insertSql = "insert into blog (`title`,`views`,`tags`, `ctime`, `utime`,`content`) values (?, ?, ?, ?, ?, ?)";
-    var params = [title,views,tags,ctime, utime,content];
+function insertBlog(title,views,tags,ctime, utime,content,emil,qq,ad,success) {
+    var insertSql = "insert into blog (`title`,`views`,`tags`, `ctime`, `utime`,`content`,`emil`,`qq`,`ad`) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    var params = [title,views,tags,ctime, utime,content,emil,qq,ad];
 
     var connection = dbutil.createConnection();
     connection.connect();
@@ -57,7 +56,6 @@ function queryBlogCount(success) {
     connection.query(querySql, params, function (error, result) {
         if (error == null) {
             success(result);
-            console.log(result)
         } else {
             console.log(error);
         }
@@ -80,7 +78,6 @@ function queryBlogById(id, success) {
     });
     connection.end();
 }
-
 function queryAllBlog(success) {
     var querySql = "select * from blog order by id desc;";
     var params = [];

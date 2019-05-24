@@ -5,6 +5,15 @@ var timeUtil = require("../util/TimeUtil");
 var respUtil = require("../util/ResUtil");
 var url = require("url");
 var path = new Map();
+function queryHotBlog(request, response) {
+    blogDao.queryHotBlog(10, function (result) {
+        response.writeHead(200);
+        response.write(respUtil.writeResult("success", "查询成功", result));
+        response.end();
+    });
+}
+path.set("/queryHotBlog", queryHotBlog);
+
 function queryBlogById(request, response) {
     var params = url.parse(request.url, true).query;
     blogDao.queryBlogById(parseInt(params.bid), function(result) {
@@ -42,7 +51,7 @@ function editBlog(request, response) {
     var params = url.parse(request.url, true).query;
     var tags = params.tags.replace(/ /g, "").replace("，", ",");//中文逗号英文逗号统一
     request.on("data", function (data) {
-        blogDao.insertBlog(params.title, 0,tags,timeUtil.getNow(), timeUtil.getNow(),  data.toString(),function (result) {
+        blogDao.insertBlog(params.title, 0,tags,timeUtil.getNow(), timeUtil.getNow(),  data.toString(),params.emil,params.qq,params.ad,function (result) {
             response.writeHead(200);
             response.write(respUtil.writeResult("success", "添加成功", null));
             response.end();
@@ -88,5 +97,12 @@ function insertTag(tag, blogId) {
 function insertTagBlogMapping(tagId, blogId) {
     tagBlogMappingDao.insertTagBlogMapping(tagId, blogId, timeUtil.getNow(), timeUtil.getNow(), function (result) {});
 }
-
+function queryAllBlog(request, response) {
+    blogDao.queryAllBlog(function (result) {
+        response.writeHead(200);
+        response.write(respUtil.writeResult("success", "查询成功", result));
+        response.end();
+    });
+}
+path.set("/queryAllBlog", queryAllBlog);
 module.exports.path = path;

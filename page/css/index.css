@@ -1,6 +1,17 @@
+.every{
+    width: 90%;
+    margin: 30px auto 0px auto;
+    
+}
+.every_day_img{
+    width: 30%;
+    height: 300px;
+    float: left;
+}
 .every_day{
+    height: 300px;
     background: #fff;
-    width: 96%;
+    /* width: 80%; */
     text-align: left;
     border-radius: 5px;
     border-radius: 0.5rem;
@@ -20,6 +31,11 @@
     display: block;
     top: 13px;
     left: 90px;
+}
+.every_day span{
+    font-size: 20px;
+    font-size: 2.0rem;
+    color: rgb(250, 47, 82);
 }
 .article_list{
     width: 100%;
@@ -109,7 +125,8 @@
     padding-top: 84px;
     padding-top: 8.4rem;
     width: 100%;
-    height: 915px;
+    height: 535px;
+    height: 53.5rem;
     position: relative;
 }
 /* @media (max-width:1536px){
