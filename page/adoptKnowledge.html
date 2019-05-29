@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/adoptKnowledge.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a class="title">
+                <img style="width: 100px;height: 50px;z-index: 1;" src="img/cloud.png"/>
+            </a>
+            <ul class="menu" style="height: 80px;">
+                <li>
+                    <a href="/index.html">首页</a>
+                    <div class="top-hr"></div>
+                    <div class="top-hr"></div></li>
+                <li>
+                    <a href="/slte.html">防骗助手</a>
+                    <div class="top-hrs"></div>
+                </li>
+                <li>
+                    <a href="/">百科</a>
+                    <div class="top-hrs"></div>
+                </li>
+                <li>
+                    <a href="/">领养须知</a>
+                    <div class="top-hrs"></div>
+                </li>
+                <li>
+                    <a href="/">更多宠物</a>
+                    <div class="top-hrs"></div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div id="adopt-knowledge">
+        <el-timeline>
+            <el-timeline-item timestamp="一" placement="top">
+              <el-card>
+                <p>领养宠物回家首先考虑宠物本身，它至少要两个月大，而且领养那一天狗的状态非常好，愿意和人接近。</p>
+              </el-card>
+            </el-timeline-item>
+            <el-timeline-item timestamp="二" placement="top">
+              <el-card>
+                <p>从自己角度考虑，因小宠物刚离开妈妈和兄弟姐妹，所以开始的几天需要你加倍的呵护和照顾。如果你是一个上班族，最好选择一个周末去接狗狗，这样就有周六和周日两天来照顾它。小狗狗对第一个照顾它的人感情最深，这样的安排可以让狗狗认识你，加深它和你的感情。</p>
+              </el-card>
+            </el-timeline-item>
+            <el-timeline-item timestamp="三" placement="top">
+              <el-card>
+                <p>领养宠物的时间最好是早上。早上去接受宠物，在宠物没吃早饭时把它抱走。因为他们吃饱了，路上再一折腾，非常容易呕吐。</p>
+              </el-card>
+            </el-timeline-item>
+            <el-timeline-item timestamp="四" placement="top">
+                <el-card>
+                  <p>从对新环境的适应性来讲，如果能一下领养两只小狗是最好的，它们可以互相鼓励，携手相伴长大，而且也不会养成对主人过分依赖的性格。同时养两只，小狗的成活率大大高于只养一只小狗 或者你家里 已经有一只了 也可以考虑再领养一只</p>
+                </el-card>
+              </el-timeline-item>
+          </el-timeline>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="./js/adoptKnowledge.js"></script>
+<script src="./js/axios.js"></script>
+</html>
