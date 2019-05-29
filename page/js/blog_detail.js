@@ -6,10 +6,14 @@ var blogDetail = new Vue({
         ctime: "",
         tags: "",
         views: "",
-        user_name:""
+        user_name:"",
+        email:'',
+        qq: ''
     },
     computed: {
-
+        formatCtime () {
+            return new Date(this.ctime).toLocaleDateString().split('/').join('-')
+        }
     },
     created: function () {
         var searcheUrlParams = location.search.indexOf("?") > -1 ? location.search.split("?")[1].split("&") : "";
@@ -31,7 +35,7 @@ var blogDetail = new Vue({
             method: "get",
             url: "/queryBlogById?bid=" + bid
         }).then(function (resp) {
-            console.log('resp',resp)
+            // console.log('resp',resp)
             var result = resp.data.data[0];
             blogDetail.title = result.title;
             blogDetail.content = result.content;
@@ -39,6 +43,8 @@ var blogDetail = new Vue({
             blogDetail.tags = result.tags;
             blogDetail.views = result.views;
             blogDetail.user_name = result.user_name;
+            blogDetail.email = result.emil
+            blogDetail.qq = result.qq
         }).catch(function (resp) {
             console.log("请求失败");
         });
@@ -95,6 +101,17 @@ var sendComment = new Vue({
                     url: "/addComment?bid=" + bid + "&parent=" + reply + "&userName=" + name + "&email=" + email + "&content=" + content + "&parentName=" + replyName
                 }).then(function (resp) {
                     alert(resp.data.msg);
+                    axios({
+                        method: "get",
+                        url: "/queryCommentsByBlogId?bid=" + bid
+                    }).then(function(resp){
+                        blogComments.comments = resp.data.data;
+                        for (var i = 0 ; i < blogComments.comments.length ; i ++) {
+                            if (blogComments.comments[i].parent > -1) {
+                                blogComments.comments[i].options = "回复@" + blogComments.comments[i].parent_name;
+                            }
+                        }
+                    });
                 });
             }
         }
