@@ -7,9 +7,32 @@
     <script src="./js/axios.js"></script>
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .back{
+            position: fixed;
+            top: 100px;
+            left: 40px;
+            /*color: #fff;*/
+            font-size: 16px;
+        }
+        .back a{
+            color: #999;
+        }
+        .topa{
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+        }
+        .topa .img{
+            width: 70px !important;
+            height: 70px !important;
+        }
+    </style>
 </head>
 <body>
 <div class="wrapper">
+    <a class="topa" href="#top"><img class="img" style="width: 100px;height: 50px;z-index: 1;" src="img/more-img.png"/></a>
+    <div class="back"><a href="index.html">返回首页</a></div>
     <div class="titles">
         <div class="ly_title title active_title">宠物领养</div>
         <div class="jy_title title">宠物寄养</div>

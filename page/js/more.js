@@ -95,3 +95,8 @@ oSex.addEventListener('click',function(e){
         // render(addFn(filterFn,person));
     }
 })
+$(".top a").click(function () {
+    $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 20 + "px" }, 500);
+    return false;
+
+});

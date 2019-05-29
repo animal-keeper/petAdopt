@@ -209,3 +209,9 @@ title.each(function(i,e){
 // var sx = setInterval(function(){
 //     window.location.reload()
 // },800)
+console.log(1,$(".topa"))
+$("topa").click(function () {
+    $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 20 + "px" }, 500);
+    return false;
+
+});

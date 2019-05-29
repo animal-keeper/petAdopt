@@ -14,6 +14,15 @@ a{
     text-decoration: none;
     color: #fff;
 }
+.top{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+}
+.top .img{
+    width: 70px !important;
+    height: 70px !important;
+}
 .more_list{
     position: fixed;
     top: 250px;
