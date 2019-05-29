@@ -15,9 +15,9 @@ function queryBlogByPage(page,pageSize,success) {
     connection.end();
 }
 
-function insertBlog(title,views,tags,ctime, utime,content,emil,qq,ad,success) {
-    var insertSql = "insert into blog (`title`,`views`,`tags`, `ctime`, `utime`,`content`,`emil`,`qq`,`ad`) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    var params = [title,views,tags,ctime, utime,content,emil,qq,ad];
+function insertBlog(title,views,tags,ctime, utime,content,emil,qq,ad,user_name,success) {
+    var insertSql = "insert into blog (`title`,`views`,`tags`, `ctime`, `utime`,`content`,`emil`,`qq`,`ad`,`user_name`) values (?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+    var params = [title,views,tags,ctime, utime,content,emil,qq,ad,user_name];
 
     var connection = dbutil.createConnection();
     connection.connect();

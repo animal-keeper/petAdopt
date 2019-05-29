@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:key="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml"
+      xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>myZoo</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./js/axios.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a class="title">
+            <img style="width: 100px;height: 50px;z-index: 1;" src="img/cloud.png"/>
+        </a>
+        <ul class="menu">
+            <li>
+                <a href="/index.html">首页</a>
+                <div class="top-hr"></div>
+                <div class="top-hr"></div></li>
+            <li>
+                <a href="/slte.html">防骗助手</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/">百科</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/">领养须知</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/more.html">更多宠物</a>
+                <div class="top-hrs"></div>
+            </li>
+        </ul>
+        <!--<div class="search_bar" >-->
+        <!--<input type="text" placeholder="输入关键词查找">-->
+        <!--<button @click="search">搜索</button>-->
+        <!--</div>-->
+    </div>
+</header>
+<!--<div class="fd_list">-->
+<!--<div class="fd_list1">领养</div>-->
+<!--<div class="fd_list2">寄养</div>-->
+<!--<div class="fd_list3">寻主</div>-->
+<!--<div class="fd_list4">寻宠</div>-->
+<!--</div>-->
+<!-- 导航轮播图 -->
+<div class="carousel">
+    <img class="carousel-bj1" src="./img/IMG_20190510_204739.jpg" alt="" style="opacity: 1;">
+    <img class="carousel-bj2" src="./img/IMG_20190510_204521.jpg" alt="" style="opacity: 0;">
+    <div class="carousel-hr" id="content" style="width: 475px;"></div>
+</div>
+<div class="every">
+    <div class="every_day_img">
+        <div class="contents-text1 lunbo1">
+
+        </div>
+    </div>
+    <div class="every_day" id="every_day">
+        <span>今日分享</span>
+        <!-- <p v-html="getTitle"></p> -->
+        <p v-html="getContent"></p>
+    </div>
+</div>
+<div class="content">
+    <div class="content_left">
+        <div class="article_list" id="article_list">
+            <div class="article" v-for="(article, index) in articleList" :key="index">
+                <div class="article_box">
+                    <!--<img class="article_img" :src="article.img"/>-->
+                    <div class="article_right">
+                        <a v-bind:href="article.link" class="article_title">{{ article.title }}</a>
+                        <p class="article_content" @click="search">
+                            {{ article.content }}
+                        </p>
+                    </div>
+                </div>
+                <div class="article_foot">
+                    发布于{{article.date}} | Tags：{{article.tags}}
+                    <!--<p class="article_foot_p1">{{ article.name }}</p>-->
+                    <!--<p class="article_foot_p2">发布于{{ article.data }}</p>-->
+                </div>
+            </div>
+            <div class="page_tool">
+                <ul>
+                    <li v-for="pageNum in pageNumList" v-on:click="jumpTo(pageNum.page)" v-bind:class="{now_page:(pageNum.text == page)}">{{pageNum.text}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content_right">
+        <div class="right_moodule" id = "random_tags">
+            <div class="">随机推荐</div>
+            <a v-for="tag in tags" v-bind:style="{color:randomColor(), fontSize:randomSize()}" v-bind:href="tag.link">{{tag.text}}</a>
+        </div>
+        <div class="right_moodule" id = "new_hot">
+            <div class="">最近热门</div>
+            <ul>
+                <li v-for="temp in titleList">
+                    <a v-bind:href="temp.link">{{temp.title}}</a>
+                </li>
+            </ul>
+        </div>
+        <!--<div class="right_moodule" id="new_comments">-->
+        <!--<div>最新评论</div>-->
+        <!--<ul>-->
+        <!--<li v-for="comment in commentList">-->
+        <!--<div>-->
+        <!--<span>{{comment.name}}</span>-->
+        <!--<span class="pull_right">{{comment.date}}</span>-->
+        <!--</div>-->
+        <!--<p>{{comment.comment}}</p>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!-- <div class="right_moodule">
+            <div class="">友情链接</div>
+            <span><a href="/">aaa</a></span>
+            <span><a href="/">aaa</a></span>
+            <span><a href="/">aaa</a></span>
+            <span><a href="/">aaa</a></span>
+            <span><a href="/">aaa</a></span>
+            <span><a href="/">aaa</a></span>
+            <span><a href="/">aaa</a></span>
+        </div> -->
+    </div>
+</div>
+</div>
+<footer class="footer">
+    <ul>
+        <li>QQ群：3238279604</li>
+        <!-- <li>c/c++</li>
+        <li>c/c++</li>
+        <li>c/c++</li>
+        <li>c/c++</li>
+        <li>c/c++</li>
+        <li>c/c++</li>
+        <li>c/c++</li> -->
+    </ul>
+    <p>宠物领养网站</p>
+</footer>
+<script src="./js/jquery-2.0.3.js"></script>
+<script src="./js/MyUtil.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/base.js"></script>
+
+</body>
+</html>

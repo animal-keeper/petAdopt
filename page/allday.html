@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百科</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./js/axios.js"></script>
+    <link rel="stylesheet" href="./css/allday.css">
+</head>
+<body>
+
+<header class="header"  id="next">
+    <div class="container">
+        <a class="title">
+            <img style="width: 100px;height: 50px;z-index: 1;" src="img/cloud.png"/>
+        </a>
+        <ul class="menu">
+            <li>
+                <a href="/index.html">首页</a>
+                <div class="top-hr"></div>
+                <div class="top-hr"></div></li>
+            <li>
+                <a href="/slte.html">防骗助手</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/">百科</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/">领养须知</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/more.html">更多宠物</a>
+                <div class="top-hrs"></div>
+            </li>
+        </ul>
+        <!--<div class="search_bar">-->
+            <!--<button><a @click="next">个人中心</a></button>-->
+        <!--</div>-->
+        <!--<div class="tc">-->
+            <!--<div class="tc_name">欢迎{{name}}</div>-->
+            <!--<a class="tc_a" href="login.html">退出</a>-->
+        <!--</div>-->
+    </div>
+</header>
+    <div id="allday" class="listalls">
+        <div v-for="(listall,index) in articleList" :key="index">
+            <div class="listall">{{listall.content}}</div>
+        </div>
+    </div>
+    <script src="./js/allday.js"></script>
+</body>
+</html>

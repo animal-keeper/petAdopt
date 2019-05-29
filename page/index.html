@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header"  id="next">
         <div class="container">
             <a class="title">
                 <img style="width: 100px;height: 50px;z-index: 1;" src="img/cloud.png"/>
@@ -39,10 +39,13 @@
                     <div class="top-hrs"></div>
                 </li>
             </ul>
-            <!--<div class="search_bar" >-->
-                <!--<input type="text" placeholder="输入关键词查找">-->
-                <!--<button @click="search">搜索</button>-->
-            <!--</div>-->
+            <div class="search_bar">
+                <button><a @click="next">个人中心</a></button>
+            </div>
+            <div class="tc">
+                <div class="tc_name">欢迎{{name}}</div>
+                <a class="tc_a" href="login.html">退出</a>
+            </div>
         </div>
     </header>
     <!--<div class="fd_list">-->
@@ -53,8 +56,8 @@
     <!--</div>-->
     <!-- 导航轮播图 -->
     <div class="carousel">
-            <img class="carousel-bj1" src="./img/IMG_20190510_204739.jpg" alt="" style="opacity: 1;">
-            <img class="carousel-bj2" src="./img/IMG_20190510_204521.jpg" alt="" style="opacity: 0;">
+            <img class="carousel-bj1" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559043790346&di=150367a88a53029fbee3eea269df5a68&imgtype=0&src=http%3A%2F%2Fbpic.wotucdn.com%2F18%2F57%2F53%2F18575392-72ef7195db28b1e0834afc9352d13e64-3.jpg" alt="" style="opacity: 1;">
+            <img class="carousel-bj2" src="https://image.zuma.com/basic/1087600242100409232.jpg" alt="" style="opacity: 0;">
             <div class="carousel-hr" id="content" style="width: 475px;"></div>
     </div>
     <div class="every">
@@ -83,7 +86,7 @@
                         </div>
                     </div>
                     <div class="article_foot">
-                        发布于{{article.date}} | Tags：{{article.tags}}
+                        发布于{{article.year}}-{{article.month}}-{{article.day}} | Tags：{{article.tags}}
                         <!--<p class="article_foot_p1">{{ article.name }}</p>-->
                         <!--<p class="article_foot_p2">发布于{{ article.data }}</p>-->
                     </div>

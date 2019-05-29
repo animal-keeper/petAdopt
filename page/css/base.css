@@ -1,8 +1,10 @@
 *{
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
 }
 body{
+    overflow-x: hidden;
     position: relative;
     text-align: center;
     /*background: pink;*/
@@ -69,10 +71,10 @@ body{
 .search_bar > button{
     display: inline-block;
     position: absolute;
-    width: 54px;
+    width: 100px;
     height: 34px;
     padding: 5px 10px;
-    border-radius: 8px;
+    border-radius: 20px;
     top: 50%;
     margin-top: -18px;
     outline: none;
@@ -250,3 +252,15 @@ body{
     font-size: 1.2rem;
     margin-top: 4px;
 }
+.tc{
+    position: absolute;
+    top: 15px;
+    right: 200px;
+}
+.tc_name{
+    margin-right: 10px;
+    float: left;
+    font-size: 15px;
+}
+.tc_a{
+    font-size: 14px;}

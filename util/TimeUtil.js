@@ -1,4 +1,4 @@
 function  getNow() {
-    return parseInt(Date.now()/1000);
+    return parseInt(Date.now());
 }
 module.exports.getNow = getNow;

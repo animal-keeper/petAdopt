@@ -51,7 +51,7 @@ function editBlog(request, response) {
     var params = url.parse(request.url, true).query;
     var tags = params.tags.replace(/ /g, "").replace("，", ",");//中文逗号英文逗号统一
     request.on("data", function (data) {
-        blogDao.insertBlog(params.title, 0,tags,timeUtil.getNow(), timeUtil.getNow(),  data.toString(),params.emil,params.qq,params.ad,function (result) {
+        blogDao.insertBlog(params.title, 0,tags,timeUtil.getNow(), timeUtil.getNow(),  data.toString(),params.emil,params.qq,params.ad,params.user_name,function (result) {
             response.writeHead(200);
             response.write(respUtil.writeResult("success", "添加成功", null));
             response.end();

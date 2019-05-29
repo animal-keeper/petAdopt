@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="./css/base.css">-->
+    <link rel="stylesheet" href="./css/more.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./js/axios.js"></script>
+</head>
+<body>
+<div class="more_list">
+    <div class="an_list1"><a href="more.html">领养消息</a></div>
+    <div class="an_list1"><a href="jy_html.html">寄养消息</a></div>
+    <div class="an_list1"><a href="more.html">寻主消息</a></div>
+    <div class="an_list1"><a href="more.html">寻宠消息</a></div>
+</div>
+<header class="header">
+    <div class="container">
+        <a class="title">
+            <img style="width: 100px;height: 50px;z-index: 1;" src="img/cloud.png"/>
+        </a>
+        <ul class="menu" style="height: 80px;">
+            <li>
+                <a href="/index.html">首页</a>
+                <div class="top-hr"></div>
+                <div class="top-hr"></div></li>
+            <li>
+                <a href="/slte.html">防骗助手</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/">百科</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/">领养须知</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/">更多宠物</a>
+                <div class="top-hrs"></div>
+            </li>
+        </ul>
+    </div>
+</header>
+<div id="search">
+    <div class="search_bar wrapper" >
+        <div class="search">
+            <input type="text" @input="ad" placeholder="请输地址" id = "inp">
+            <!--<ul id="sex">-->
+            <!--<li class="active" sex = "all">ALL</li>-->
+            <!--<li sex = "male">猫咪</li>-->
+            <!--<li sex = "female">狗狗</li>-->
+            <!--</ul>-->
+        </div>
+        <div class="content">
+            <div class="content_list" v-for="blog in blogList">
+                <!--<img class="content_img" src="img/圆角矩形8.png"/>-->
+                <a v-bind:href="blog.link">{{blog.title}}</a>
+                <a>{{blog.tags}}</a>
+                <a>{{blog.ad}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/xc.js"></script>
+<script src="../util/MyUtil.js"></script>
+</body>
+</html>

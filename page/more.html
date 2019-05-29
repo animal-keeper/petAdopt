@@ -9,6 +9,12 @@
     <script src="./js/axios.js"></script>
 </head>
 <body>
+<div class="more_list">
+    <div class="an_list1"><a href="more.html">领养消息</a></div>
+    <div class="an_list1"><a href="jy_html.html">寄养消息</a></div>
+    <div class="an_list1"><a href="more.html">寻主消息</a></div>
+    <div class="an_list1"><a href="more.html">寻宠消息</a></div>
+</div>
 <header class="header">
     <div class="container">
         <a class="title">
@@ -42,11 +48,11 @@
         <div class="search_bar wrapper" >
             <div class="search">
                 <input type="text" @input="ad" placeholder="请输地址" id = "inp">
-                <ul id="sex">
-                    <li class="active" sex = "all">ALL</li>
-                    <li sex = "male">猫咪</li>
-                    <li sex = "female">狗狗</li>
-                </ul>
+                <!--<ul id="sex">-->
+                    <!--<li class="active" @click="filter('all')">ALL</li>-->
+                    <!--<li @click="filter('m')">猫咪</li>-->
+                    <!--<li @click="filter('g')">狗狗</li>-->
+                <!--</ul>-->
             </div>
             <div class="content">
                 <div class="content_list" v-for="blog in blogList">

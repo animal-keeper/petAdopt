@@ -27,6 +27,25 @@ app.get("/queryByTag", loader.get("/queryByTag"));
 app.get("/queryByTagCount", loader.get("/queryByTagCount"));
 
 app.get("/queryAllBlog", loader.get("/queryAllBlog"));
+
+app.post("/editjyBlog", loader.get("/editjyBlog"));
+app.get("/queryAlljyBlog", loader.get("/queryAlljyBlog"));
+app.get("/queryBlogjyById", loader.get("/queryBlogjyById"));
+
+app.get("/queryAllday", loader.get("/queryAllday"));
+
+app.post("/editxzBlog", loader.get("/editxzBlog"));
+app.get("/queryAllxzBlog", loader.get("/queryAllxzBlog"));
+app.get("/queryBlogxzById", loader.get("/queryBlogxzById"));
+
+app.post("/editxcBlog", loader.get("/editxcBlog"));
+app.get("/queryAllxcBlog", loader.get("/queryAllxcBlog"));
+app.get("/queryBlogxcById", loader.get("/queryBlogxcById"));
+
+app.get("/deleteBlogById", loader.get("/deleteBlogById"));
+app.get("/deletejyBlogById", loader.get("/deletejyBlogById"));
+app.get("/deletexzBlogById", loader.get("/deletexzBlogById"));
+app.get("/deletexcBlogById", loader.get("/deletexcBlogById"));
 app.listen(globalConfig.port,function(){
     console.log("服务器已启动");
 });

@@ -8,6 +8,7 @@ function insertComment(blogId, parent, parentName, userName, email, comments, ct
     connection.connect();
     connection.query(insertSql, params, function (error, result) {
         if (error == null) {
+            console.log(6,result)
             success(result);
         } else {
             console.log(error);

@@ -5,7 +5,8 @@ var blogDetail = new Vue({
         content: "",
         ctime: "",
         tags: "",
-        views: ""
+        views: "",
+        user_name:""
     },
     computed: {
 
@@ -36,6 +37,7 @@ var blogDetail = new Vue({
             blogDetail.ctime = result.ctime;
             blogDetail.tags = result.tags;
             blogDetail.views = result.views;
+            blogDetail.user_name = result.user_name;
         }).catch(function (resp) {
             console.log("请求失败");
         });
@@ -82,7 +84,9 @@ var sendComment = new Vue({
                 }
                 var reply = document.getElementById("comment_reply").value;
                 var replyName = document.getElementById("comment_reply_name").value;
-                var name = document.getElementById("comment_name").value;
+                // var replyName = localStorage.userName;
+                // var name = document.getElementById("comment_name").value;
+                var name = localStorage.userName;
                 var email = document.getElementById("comment_email").value;
                 var content = document.getElementById("comment_content").value;
                 axios({
@@ -103,9 +107,7 @@ var blogComments = new Vue({
     el: "#blog_comments",
     data: {
         total: 0,
-        comments: [
-            {id:"1",user_name:"pande",ctime:"12312312",comments:"fadj",options:""}
-        ]
+        comments: []
     },
     computed: {
         reply: function() {

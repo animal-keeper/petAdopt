@@ -53,9 +53,11 @@ var login = new Vue({
                 } else {
                     if (res.data.msg === '登录成功') {
                         if (that.isAdmin) {
-                            localStorage.adminId = data.admin_id
-                            window.location.href = ''
+                            localStorage.adminId = 1
+                            localStorage.userName = "可爱猿"
+                            window.location.href = 'http://localhost:12306/index.html'
                         } else {
+                            localStorage.adminId = 0
                             localStorage.userId = data.user_id
                             localStorage.userName = data.user_name
                             window.location.href = 'http://localhost:12306/index.html'

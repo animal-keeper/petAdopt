@@ -24,9 +24,24 @@ var everyDay = new Vue({
         });
     }
 });
-// var search = new Vue{
-//
-// }
+var next = new Vue({
+    el:"#next",
+    data:{
+           name:localStorage.userName
+    },
+    methods:{
+        next(){
+            if(localStorage.adminId == 0){
+                window.location.href = "http://localhost:12306/my.html"
+            }else if(localStorage.adminId == 1){
+                window.location.href = "http://localhost:12306/gl_my.html"
+            }else{
+                window.location.href = "http://localhost:12306/login.html"
+            }
+            // console.log(localStorage.adminId)
+        }
+    }
+})
 var articleList = new Vue({
     el:"#article_list",
     data:{
@@ -55,6 +70,7 @@ var articleList = new Vue({
             }
         },
         getPage: function() {
+            var that = this;
             return function (page, pageSize) {
                 var searcheUrlParams = location.search.indexOf("?") > -1 ? location.search.split("?")[1].split("&") : "";
                 var tag = "";
@@ -74,19 +90,27 @@ var articleList = new Vue({
                     }).then(function(resp) {
                         var result = resp.data.data;
                         var list = [];
+
                         for (var i = 0 ; i < result.length ; i ++) {
                             var temp = {};
+                            var datayear = new Date(result[i].ctime).getFullYear();
+                            var datamonth = new Date(result[i].ctime).getMonth() + 1;
+                            var dataday = new Date(result[i].ctime).getDate();
                             temp.title = result[i].title;
                             temp.content = result[i].content;
-                            temp.date = result[i].ctime;
+                            temp.year = datayear;
+                            temp.month = datamonth;
+                            temp.day = dataday;
                             temp.views = result[i].views;
                             temp.tags = result[i].tags;
                             temp.id = result[i].id;
                             temp.link = "/blog_detail.html?bid=" + result[i].id;
                             list.push(temp);
+                            console.log(result[i].ctime)
                         }
                         articleList.articleList = list;
                         articleList.page = page;
+                        // console.log(8,this.tsFormatTime())
                     }).catch(function (resp) {
                         console.log("请求错误");
                     });
@@ -109,11 +133,13 @@ var articleList = new Vue({
                             temp.title = result[i].title;
                             temp.content = result[i].content;
                             temp.date = result[i].ctime;
+                            // temp.date = this.tsFormatTime(time,'Y-M-D h:m:s')
                             temp.views = result[i].views;
                             temp.tags = result[i].tags;
                             temp.id = result[i].id;
                             temp.link = "/blog_detail.html?bid=" + result[i].id;
                             list.push(temp);
+                            // console.log(result[i].ctime)
                         }
                         articleList.articleList = list;
                         articleList.page = page;
@@ -163,7 +189,28 @@ var articleList = new Vue({
     methods:{
         search:function(){
             console.log(8,this.articleList)
-        }
+        },
+        tsFormatTime: function (timestamp, format) {
+    const formateArr = ['Y', 'M', 'D', 'h', 'm', 's'];
+    let returnArr = [];
+
+    let date = new Date(timestamp);
+    let year = date.getFullYear()
+    let month = date.getMonth() + 1
+    let day = date.getDate()
+    let hour = date.getHours()
+    let minute = date.getMinutes()
+    let second = date.getSeconds()
+    returnArr.push(year, month, day, hour, minute, second);
+
+    returnArr = returnArr.map(formatNumber);
+
+    for (var i in returnArr) {
+        format = format.replace(formateArr[i], returnArr[i]);
+    }
+    return format;
+
+}
     }
 
 });
