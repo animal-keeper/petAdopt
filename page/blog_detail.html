@@ -63,7 +63,7 @@
 
         <div class="blog_comments" id="blog_comments">
             <div class="blog_comment" v-for="comment in comments">
-                <span><b>{{comment.user_name}}</b>：{{comment.options}} 发表于 {{comment.ctime}} <a style="cursor: pointer" v-on:click="reply(comment.id, comment.user_name)">[回复]</a></span>
+                <span><b>{{comment.user_name}}</b>：{{comment.options}} 发表于 {{new Date(comment.ctime).toLocaleDateString().split('/').join('-')}} <a style="cursor: pointer" v-on:click="reply(comment.id, comment.user_name)">[回复]</a></span>
                 <div>{{comment.comments}}</div>
             </div>
         </div>

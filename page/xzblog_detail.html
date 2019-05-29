@@ -49,7 +49,7 @@
         <div class="blog_comments" id="blog_comments">
             <!--<span class="blog_comments_msg">当前文章：{{total}} 条留言</span>-->
             <div class="blog_comment" v-for="comment in comments">
-                <span><b>{{comment.user_name}}</b>：{{comment.options}} 发表于 {{comment.ctime}} <a style="cursor: pointer" v-on:click="reply(comment.id, comment.user_name)">[回复]</a></span>
+                <span><b>{{comment.user_name}}</b>：{{comment.options}} 发表于 {{new Date(comment.ctime).toLocaleDateString().split('/').join('-')}} <a style="cursor: pointer" v-on:click="reply(comment.id, comment.user_name)">[回复]</a></span>
                 <div>{{comment.comments}}</div>
             </div>
         </div>
