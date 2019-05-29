@@ -28,7 +28,7 @@
                 <div class="top-hrs"></div>
             </li>
             <li>
-                <a href="/lyxz.html">领养须知</a>
+                <a href="/adoptKnowledge.html">领养须知</a>
                 <div class="top-hrs"></div>
             </li>
             <li>
@@ -49,7 +49,15 @@
     <div class="content_left">
         <div class="blog" id="blog_detail">
             <div class="blog_title">{{title}}</div>
-            <div class="blog_msg">作者：{{user_name}} 标签：{{tags}} 发布于：{{ctime}} 浏览（{{views}}）</div>
+            <div class="blog_msg">作者：{{user_name}} 标签：{{tags}} 发布于：{{ formatCtime }} 浏览（{{views}}）</div>
+            <div>
+                <span>邮箱：</span>
+                <span>{{ email }}</span>
+            </div>
+            <div>
+                <span>QQ：</span>
+                <span>{{ qq }}</span>
+            </div>
             <div class="blog_content" v-html="content"></div>
         </div>
 
