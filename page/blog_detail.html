@@ -3,24 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>个人博客</title>
-    <link rel="stylesheet" href="./css/base.css">
+    <!--<link rel="stylesheet" href="./css/base.css">-->
     <link rel="stylesheet" href="./css/blog_detail.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="./js/axios.js"></script>
 </head>
 <body>
-<header class="header">
+<header class="header"  id="next">
     <div class="container">
-        <a href="/" class="title">我的个人博客 | 技术博客</a>
+        <a class="title">
+            <img style="width: 100px;height: 50px;z-index: 1;" src="img/cloud.png"/>
+        </a>
         <ul class="menu">
-            <li><a href="/">首页</a></li>
-            <li><a href="/sitemap.html">地图</a></li>
-            <li><a href="/about.html">关于</a></li>
-            <li><a href="/guestbook.html">留言</a></li>
+            <li>
+                <a href="/index.html">首页</a>
+                <div class="top-hr"></div>
+                <div class="top-hr"></div></li>
+            <li>
+                <a href="/fpzc.html">防骗助手</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/allday.html">百科</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/lyxz.html">领养须知</a>
+                <div class="top-hrs"></div>
+            </li>
+            <li>
+                <a href="/more.html">更多宠物</a>
+                <div class="top-hrs"></div>
+            </li>
         </ul>
         <div class="search_bar">
-            <input type="text" placeholder="输入关键词查找">
-            <button>搜索</button>
+            <button><a @click="next">个人中心</a></button>
+        </div>
+        <div class="tc">
+            <div class="tc_name">欢迎{{name}}</div>
+            <a class="tc_a" href="login.html">退出</a>
         </div>
     </div>
 </header>
@@ -33,7 +54,6 @@
         </div>
 
         <div class="blog_comments" id="blog_comments">
-            <span class="blog_comments_msg">当前文章：{{total}} 条留言</span>
             <div class="blog_comment" v-for="comment in comments">
                 <span><b>{{comment.user_name}}</b>：{{comment.options}} 发表于 {{comment.ctime}} <a style="cursor: pointer" v-on:click="reply(comment.id, comment.user_name)">[回复]</a></span>
                 <div>{{comment.comments}}</div>
@@ -58,40 +78,40 @@
             <button v-on:click="sendComment()">提交评论</button>
         </div>
     </div>
-    <div class="content_right">
-        <div class="right_moodule" id="random_tags">
-            <div>随机标签云</div>
-            <a v-for="tag in tags" v-bind:style="{color:randomColor(), fontSize:randomSize()}" v-bind:href="tag.link">{{tag.text}}</a>
-        </div>
-        <div class="right_moodule" id="new_hot">
-            <div>最近热门</div>
-            <ul>
-                <li v-for="temp in titleList">
-                    <a v-bind:href="temp.link">{{temp.title}}</a>
-                </li>
-            </ul>
-        </div>
-        <div class="right_moodule" id="new_comments">
-            <div>最新评论</div>
-            <ul>
-                <li v-for="comment in commentList">
-                    <div>
-                        <span>{{comment.name}}</span>
-                        <span class="pull_right">{{comment.date}}</span>
-                    </div>
-                    <p>{{comment.comment}}</p>
-                </li>
-            </ul>
-        </div>
-        <div class="right_moodule">
-            <div>友情链接</div>
-            <span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>
-            <span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>
-            <span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>
-            <span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>
-            <span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>
-        </div>
-    </div>
+    <!--<div class="content_right">-->
+        <!--<div class="right_moodule" id="random_tags">-->
+            <!--<div>随机标签云</div>-->
+            <!--<a v-for="tag in tags" v-bind:style="{color:randomColor(), fontSize:randomSize()}" v-bind:href="tag.link">{{tag.text}}</a>-->
+        <!--</div>-->
+        <!--<div class="right_moodule" id="new_hot">-->
+            <!--<div>最近热门</div>-->
+            <!--<ul>-->
+                <!--<li v-for="temp in titleList">-->
+                    <!--<a v-bind:href="temp.link">{{temp.title}}</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="right_moodule" id="new_comments">-->
+            <!--<div>最新评论</div>-->
+            <!--<ul>-->
+                <!--<li v-for="comment in commentList">-->
+                    <!--<div>-->
+                        <!--<span>{{comment.name}}</span>-->
+                        <!--<span class="pull_right">{{comment.date}}</span>-->
+                    <!--</div>-->
+                    <!--<p>{{comment.comment}}</p>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="right_moodule">-->
+            <!--<div>友情链接</div>-->
+            <!--<span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>-->
+            <!--<span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>-->
+            <!--<span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>-->
+            <!--<span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>-->
+            <!--<span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>-->
+        <!--</div>-->
+    <!--</div>-->
 </div>
 <footer class="footer">
     <ul>

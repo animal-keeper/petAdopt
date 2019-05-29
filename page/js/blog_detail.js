@@ -31,6 +31,7 @@ var blogDetail = new Vue({
             method: "get",
             url: "/queryBlogById?bid=" + bid
         }).then(function (resp) {
+            console.log('resp',resp)
             var result = resp.data.data[0];
             blogDetail.title = result.title;
             blogDetail.content = result.content;
@@ -152,3 +153,21 @@ var blogComments = new Vue({
         });
     }
 });
+var next = new Vue({
+    el:"#next",
+    data:{
+        name:localStorage.userName
+    },
+    methods:{
+        next(){
+            if(localStorage.adminId == 0){
+                window.location.href = "http://localhost:12306/my.html"
+            }else if(localStorage.adminId == 1){
+                window.location.href = "http://localhost:12306/gl_my.html"
+            }else{
+                window.location.href = "http://localhost:12306/login.html"
+            }
+            // console.log(localStorage.adminId)
+        }
+    }
+})

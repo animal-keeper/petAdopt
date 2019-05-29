@@ -163,7 +163,7 @@ var articleList = new Vue({
             var pageSize = this.pageSize;
             var totalCount = this.count;
             var result = [];
-            result.push({text:"<<", page: 1});
+            result.push({text:"首页", page: 1});
             if (nowPage > 2) {
                 result.push({text: nowPage - 2, page:nowPage - 2});
             }
@@ -177,7 +177,7 @@ var articleList = new Vue({
             if (nowPage + 2 <= (totalCount + pageSize - 1) / pageSize) {
                 result.push({text:nowPage + 2, page: nowPage + 2});
             }
-            result.push({text:">>", page: parseInt((totalCount + pageSize - 1) / pageSize)});
+            result.push({text:"尾页", page: parseInt((totalCount + pageSize - 1) / pageSize)});
             this.pageNumList = result;
             return result;
         },

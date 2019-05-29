@@ -205,9 +205,10 @@ body{
     line-height: 30px;
     background: white;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     float: left;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .page_tool > ul > li:hover {
@@ -215,7 +216,7 @@ body{
 }
 
 .now_page {
-    background: hotpink !important;
+    background: #f40 !important;
     color: #fff !important;
 }
 /* 轮播2 */
