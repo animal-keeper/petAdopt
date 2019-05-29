@@ -23,8 +23,9 @@
             var emil = $("#emil").val();
             var qq = $("#qq").val();
             var ad = $("#ad").val();
+            var user_name = localStorage.userName;
             $.ajax({
-                url: "/editxzBlog?title=" + title + "&tags=" + tags + "&emil=" + emil + "&qq=" + qq + "&ad=" + ad,
+                url: "/editxzBlog?title=" + title + "&tags=" + tags + "&emil=" + emil + "&qq=" + qq + "&ad=" + ad+ "&user_name=" + user_name,
                 method: "post",
                 data: content,
                 success: function(resp) {

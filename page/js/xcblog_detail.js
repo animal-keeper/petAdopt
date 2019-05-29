@@ -36,6 +36,7 @@ var blogDetail = new Vue({
             blogDetail.ctime = result.ctime;
             blogDetail.tags = result.tags;
             blogDetail.views = result.views;
+            blogDetail.user_name = result.user_name;
         }).catch(function (resp) {
             console.log("请求失败");
         });
@@ -82,7 +83,7 @@ var sendComment = new Vue({
                 }
                 var reply = document.getElementById("comment_reply").value;
                 var replyName = document.getElementById("comment_reply_name").value;
-                var name = document.getElementById("comment_name").value;
+                var name = localStorage.userName;
                 var email = document.getElementById("comment_email").value;
                 var content = document.getElementById("comment_content").value;
                 axios({
