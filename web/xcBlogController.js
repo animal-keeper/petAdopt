@@ -10,7 +10,7 @@ function editxcBlog(request, response) {
     console.log(6,params)
     var tags = params.tags.replace(/ /g, "").replace("，", ",");//中文逗号英文逗号统一
     request.on("data", function (data) {
-        xcblogDao.insertxcBlog(params.title, tags,timeUtil.getNow(), timeUtil.getNow(),  data.toString(),params.emil,params.qq,params.ad,function (result) {
+        xcblogDao.insertxcBlog(params.title, tags,timeUtil.getNow(), timeUtil.getNow(),  data.toString(),params.emil,params.qq,params.ad,params.user_name,function (result) {
             response.writeHead(200);
             response.write(respUtil.writeResult("success", "添加成功", null));
             response.end();

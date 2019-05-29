@@ -1,7 +1,7 @@
 var dbutil = require("./DBUtil");
-function insertxcBlog(title,tags,ctime,utime,content,emil,qq,ad,success){
-    var insertSql = "insert into xc_blog (`title`,`tags`,`ctime`,`utime`,`content`,`emil`,`qq`,`ad`)values(?,?,?,?,?,?,?,?)"
-    var params =[title,tags,ctime,utime,content,emil,qq,ad];
+function insertxcBlog(title,tags,ctime,utime,content,emil,qq,ad,user_name,success){
+    var insertSql = "insert into xc_blog (`title`,`tags`,`ctime`,`utime`,`content`,`emil`,`qq`,`ad`,`user_name`)values(?,?,?,?,?,?,?,?,?)"
+    var params =[title,tags,ctime,utime,content,emil,qq,ad,user_name];
     var connection = dbutil.createConnection();
     connection.connect();
     connection.query(insertSql,params,function(error,result){
