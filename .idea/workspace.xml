@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e388adf-48ba-4456-ad42-eb43219cf2d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/page/blog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/blog_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/css/blog_detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/blog_detail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/css/guestbool.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/guestbool.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/adoptKnowledge.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/css/adoptKnowledge.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page/js/adoptKnowledge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/css/fpzc.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/fpzc.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/fpzc.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/fpzc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/js/blog_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/page/js/blog_detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/page/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/more.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/more.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/my.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/my.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/my.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="309">
@@ -84,6 +81,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/css/guestbool.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/css/fpzc.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state relative-caret-position="130">
+              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -108,13 +114,6 @@
             <state relative-caret-position="-964">
               <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/css/my.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3021" />
           </provider>
         </entry>
       </file>
@@ -210,7 +209,6 @@
         <option value="$PROJECT_DIR$/page/jyedit_blog.html" />
         <option value="$PROJECT_DIR$/page/xcedit_blog.html" />
         <option value="$PROJECT_DIR$/page/xzedit_blog.html" />
-        <option value="$PROJECT_DIR$/page/index.html" />
         <option value="$PROJECT_DIR$/page/js/index.js" />
         <option value="$PROJECT_DIR$/page/css/base.css" />
         <option value="$PROJECT_DIR$/page/blog_detail.html" />
@@ -220,6 +218,7 @@
         <option value="$PROJECT_DIR$/page/js/blog_detail.js" />
         <option value="$PROJECT_DIR$/page/more.html" />
         <option value="$PROJECT_DIR$/page/my.html" />
+        <option value="$PROJECT_DIR$/page/index.html" />
       </list>
     </option>
   </component>
@@ -372,12 +371,12 @@
       <workItem from="1558949169910" duration="2878000" />
       <workItem from="1559005402591" duration="22555000" />
       <workItem from="1559051517771" duration="610000" />
-      <workItem from="1559102943713" duration="3977000" />
+      <workItem from="1559102943713" duration="4126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272411000" />
+    <option name="totallyTimeSpent" value="272560000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -669,13 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -709,8 +701,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/css/fpzc.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state relative-caret-position="130">
+          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -781,6 +773,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="61" column="53" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
         </state>
       </provider>
     </entry>
