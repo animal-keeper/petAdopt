@@ -46,7 +46,7 @@
                     <div>{{ly_lists.title}}</div>
                     <!--<div>{{ly_lists.content}}</div>-->
                     <div>{{ly_lists.tags}}</div>
-                    <div>{{ly_lists.ctime}}</div>
+                    <div>{{new Date(ly_lists.ctime).toLocaleDateString().split('/').join('-')}}</div>
                     <div @click="del(ly_lists.id, index)"  class="sc_content">删除</div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                 <div>{{jy_lists.title}}</div>
                 <!--<div>{{ly_lists.content}}</div>-->
                 <div>{{jy_lists.tags}}</div>
-                <div>{{jy_lists.ctime}}</div>
+                <div>{{new Date(jy_lists.ctime).toLocaleDateString().split('/').join('-')}}</div>
                 <div @click="del(jy_lists.id, index)"  class="sc_content">删除</div>
             </div>
         </div>
@@ -65,7 +65,7 @@
                 <div>{{xz_lists.title}}</div>
                 <!--<div>{{ly_lists.content}}</div>-->
                 <div>{{xz_lists.tags}}</div>
-                <div>{{xz_lists.ctime}}</div>
+                <div>{{new Date(xz_lists.ctime).toLocaleDateString().split('/').join('-')}}</div>
                 <div @click="del(xz_lists.id, index)"  class="sc_content">删除</div>
             </div>
         </div>
@@ -74,7 +74,7 @@
                 <div>{{xc_lists.title}}</div>
                 <!--<div>{{ly_lists.content}}</div>-->
                 <div>{{xc_lists.tags}}</div>
-                <div>{{xc_lists.ctime}}</div>
+                <div>{{new Date(xc_lists.ctime).toLocaleDateString().split('/').join('-')}}</div>
                 <div @click="del(xc_lists.id, index)"  class="sc_content">删除</div>
             </div>
         </div>
