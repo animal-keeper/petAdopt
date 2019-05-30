@@ -209,8 +209,9 @@ title.each(function(i,e){
 // var sx = setInterval(function(){
 //     window.location.reload()
 // },800)
-console.log(1,$(".topa"))
-$("topa").click(function () {
+// console.log(1,$(".topa"))
+$(".wrapper a").click(function () {
+    console.log(2)
     $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top - 20 + "px" }, 500);
     return false;
 
