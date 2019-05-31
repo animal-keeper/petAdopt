@@ -13,7 +13,7 @@ var path = new Map();
 function addComment(request, response) {
     var params = url.parse(request.url, true).query;
 
-    commentDao.insertComment(parseInt(params.bid), parseInt(params.parent), params.parentName, params.userName, params.email, params.content, timeUtil.getNow(), timeUtil.getNow(), function (result) {
+    commentDao.insertComment(parseInt(params.bid), parseInt(params.parent), params.parentName, params.userName, params.content, timeUtil.getNow(), timeUtil.getNow(), function (result) {
         response.writeHead(200);
         response.write(respUtil.writeResult("success", "评论成功", null));
         response.end();

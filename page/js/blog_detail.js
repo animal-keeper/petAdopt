@@ -94,11 +94,11 @@ var sendComment = new Vue({
                 // var replyName = localStorage.userName;
                 // var name = document.getElementById("comment_name").value;
                 var name = localStorage.userName;
-                var email = document.getElementById("comment_email").value;
+                // var email = document.getElementById("comment_email").value;
                 var content = document.getElementById("comment_content").value;
                 axios({
                     method: "get",
-                    url: "/addComment?bid=" + bid + "&parent=" + reply + "&userName=" + name + "&email=" + email + "&content=" + content + "&parentName=" + replyName
+                    url: "/addComment?bid=" + bid + "&parent=" + reply + "&userName=" + name + "&content=" + content + "&parentName=" + replyName
                 }).then(function (resp) {
                     alert(resp.data.msg);
                     axios({

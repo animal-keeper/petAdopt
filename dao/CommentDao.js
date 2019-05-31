@@ -1,8 +1,8 @@
 var dbutil = require("./DBUtil");
 
-function insertComment(blogId, parent, parentName, userName, email, comments, ctime, utime, success) {
-    var insertSql = "insert into comments (`blog_id`, `parent`, `parent_name`, `user_name`, `email`, `comments`, `ctime`, `utime`) values (?, ?, ?, ?, ?, ?, ?, ?)";
-    var params = [blogId, parent, parentName, userName, email, comments, ctime, utime];
+function insertComment(blogId, parent, parentName, userName, comments, ctime, utime, success) {
+    var insertSql = "insert into comments (`blog_id`, `parent`, `parent_name`, `user_name`, `comments`, `ctime`, `utime`) values (?, ?, ?, ?, ?, ?, ?)";
+    var params = [blogId, parent, parentName, userName, comments, ctime, utime];
 
     var connection = dbutil.createConnection();
     connection.connect();

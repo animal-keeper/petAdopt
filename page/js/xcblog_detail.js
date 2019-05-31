@@ -90,7 +90,7 @@ var sendComment = new Vue({
                 var reply = document.getElementById("comment_reply").value;
                 var replyName = document.getElementById("comment_reply_name").value;
                 var name = localStorage.userName;
-                var email = document.getElementById("comment_email").value;
+                // var email = document.getElementById("comment_email").value;
                 var content = document.getElementById("comment_content").value;
                 axios({
                     method: "get",
