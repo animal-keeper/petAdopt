@@ -2,20 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e388adf-48ba-4456-ad42-eb43219cf2d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/CommentDao.js" beforeDir="false" afterPath="$PROJECT_DIR$/dao/CommentDao.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/adoptKnowledge.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/adoptKnowledge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/allday.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/allday.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/blog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/blog_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/js/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/page/js/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/js/blog_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/page/js/blog_detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/js/jyblog_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/page/js/jyblog_detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/js/xcblog_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/page/js/xcblog_detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/js/xzblog_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/page/js/xzblog_detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/fpzc.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/fpzc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/jy_html.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/jy_html.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/jyblog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/jyblog_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/more.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/more.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/xcblog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/xcblog_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/xzblog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/xzblog_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/commentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/commentController.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/page/jyblog_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-313">
-              <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+              <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -64,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/page/xcblog_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="81" column="18" lean-forward="true" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+              <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -73,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/page/xzblog_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
-              <caret line="81" column="18" lean-forward="true" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+              <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
               <folding>
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -111,8 +110,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="78" column="18" lean-forward="true" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+            <state relative-caret-position="266">
+              <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -392,12 +391,12 @@
       <workItem from="1559139917147" duration="1097000" />
       <workItem from="1559201646592" duration="172000" />
       <workItem from="1559204433171" duration="5791000" />
-      <workItem from="1559275674209" duration="14109000" />
+      <workItem from="1559275674209" duration="14268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300975000" />
+    <option name="totallyTimeSpent" value="301134000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -834,7 +833,7 @@
     <entry file="file://$PROJECT_DIR$/page/jyblog_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-313">
-          <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+          <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -848,14 +847,14 @@
     <entry file="file://$PROJECT_DIR$/page/xcblog_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="81" column="18" lean-forward="true" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+          <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/xzblog_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
-          <caret line="81" column="18" lean-forward="true" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+          <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
           <folding>
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
           </folding>
@@ -885,8 +884,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="78" column="18" lean-forward="true" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+        <state relative-caret-position="266">
+          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
