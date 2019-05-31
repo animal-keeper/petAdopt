@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e388adf-48ba-4456-ad42-eb43219cf2d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/page/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/adoptKnowledge.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/adoptKnowledge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/allday.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/allday.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/blog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/blog_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/fpzc.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/fpzc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/css/all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/js/xcblog_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/page/js/xcblog_detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/jy_html.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/jy_html.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/jyblog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/jyblog_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/more.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/more.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/xcblog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/xcblog_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/xzblog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/xzblog_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/xc_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/xc_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/xz_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/xz_index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,98 +25,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/jyblog_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-313">
-              <caret line="90" column="22" lean-forward="true" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/js/jyblog_detail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="97" column="93" selection-start-line="97" selection-start-column="93" selection-end-line="97" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/js/blog_detail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="102" column="41" lean-forward="true" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/xcblog_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/xzblog_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
-              <folding>
-                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/js/xcblog_detail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/js/xzblog_detail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="93" column="28" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/js/about.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="73" column="93" selection-start-line="73" selection-start-column="93" selection-end-line="73" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/page/about.html">
+        <entry file="file://$PROJECT_DIR$/page/more.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="309">
+              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/CommentDao.js">
+        <entry file="file://$PROJECT_DIR$/page/jy_html.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="130" selection-start-line="3" selection-start-column="130" selection-end-line="3" selection-end-column="130" />
+            <state relative-caret-position="252">
+              <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/xc_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/xz_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/all.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/css/all.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -179,8 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/page/js/allday.js" />
-        <option value="$PROJECT_DIR$/page/css/fpzc.css" />
         <option value="$PROJECT_DIR$/page/css/base.css" />
         <option value="$PROJECT_DIR$/page/css/guestbool.css" />
         <option value="$PROJECT_DIR$/page/css/blog_detail.css" />
@@ -205,9 +154,6 @@
         <option value="$PROJECT_DIR$/page/all.html" />
         <option value="$PROJECT_DIR$/page/fpzc.html" />
         <option value="$PROJECT_DIR$/page/adoptKnowledge.html" />
-        <option value="$PROJECT_DIR$/page/more.html" />
-        <option value="$PROJECT_DIR$/page/xc_index.html" />
-        <option value="$PROJECT_DIR$/page/xz_index.html" />
         <option value="$PROJECT_DIR$/web/BlogController.js" />
         <option value="$PROJECT_DIR$/page/js/more.js" />
         <option value="$PROJECT_DIR$/page/js/jy.js" />
@@ -226,16 +172,21 @@
         <option value="$PROJECT_DIR$/page/js/jyblog_detail.js" />
         <option value="$PROJECT_DIR$/page/xcblog_detail.html" />
         <option value="$PROJECT_DIR$/page/xzblog_detail.html" />
-        <option value="$PROJECT_DIR$/page/js/xcblog_detail.js" />
         <option value="$PROJECT_DIR$/page/js/xzblog_detail.js" />
         <option value="$PROJECT_DIR$/page/js/about.js" />
         <option value="$PROJECT_DIR$/page/about.html" />
+        <option value="$PROJECT_DIR$/page/js/xcblog_detail.js" />
+        <option value="$PROJECT_DIR$/page/jy_html.html" />
+        <option value="$PROJECT_DIR$/page/xc_index.html" />
+        <option value="$PROJECT_DIR$/page/xz_index.html" />
+        <option value="$PROJECT_DIR$/page/css/all.css" />
+        <option value="$PROJECT_DIR$/page/more.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="356" />
-    <option name="y" value="43" />
+    <option name="x" value="307" />
+    <option name="y" value="103" />
     <option name="width" value="1470" />
     <option name="height" value="1050" />
   </component>
@@ -391,12 +342,12 @@
       <workItem from="1559139917147" duration="1097000" />
       <workItem from="1559201646592" duration="172000" />
       <workItem from="1559204433171" duration="5791000" />
-      <workItem from="1559275674209" duration="14268000" />
+      <workItem from="1559275674209" duration="14892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301134000" />
+    <option name="totallyTimeSpent" value="301758000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -408,7 +359,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="285" y="35" width="1176" height="840" extended-state="0" />
+    <frame x="246" y="83" width="1176" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -510,13 +461,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dao/xcBlogDao.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="68" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dao/jyBlogDao.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -599,38 +543,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/more.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="51" column="18" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="51" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/all.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page/adoptKnowledge.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
           <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/xc_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="50" column="18" selection-start-line="44" selection-start-column="7" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/xz_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="50" column="18" selection-start-line="44" selection-start-column="12" selection-end-line="50" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -692,13 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/jy_html.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -823,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dao/CommentDao.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="130" selection-start-line="3" selection-start-column="130" selection-end-line="3" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page/jyblog_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-313">
@@ -864,7 +766,7 @@
     <entry file="file://$PROJECT_DIR$/page/js/xcblog_detail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+          <caret line="96" column="94" selection-start-line="96" selection-start-column="94" selection-end-line="96" selection-end-column="94" />
         </state>
       </provider>
     </entry>
@@ -884,11 +786,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="-1358">
           <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/CommentDao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="130" selection-start-line="3" selection-start-column="130" selection-end-line="3" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/jy_html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/xc_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/xz_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/css/all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/more.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
         </state>
       </provider>
     </entry>
