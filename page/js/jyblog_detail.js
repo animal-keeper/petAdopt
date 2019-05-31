@@ -42,7 +42,7 @@ var blogDetail = new Vue({
             blogDetail.tags = result.tags;
             blogDetail.views = result.views;
             blogDetail.user_name = result.user_name;
-            blogDetail.email = result.emai
+            blogDetail.email = result.emil;
             blogDetail.qq = result.qq
         }).catch(function (resp) {
             console.log("请求失败");

@@ -40,7 +40,7 @@ var search = new Vue({
                 }else{
                     self.filterText(value.data,self.blogList2)
                 }
-            },300)
+            },800)
         },
         filterText(val,arr){
             var fArr = arr.filter(function(ele,index){

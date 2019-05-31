@@ -26,7 +26,7 @@ var randomTeas = new Vue({
         }).then(function(resp){
             var result = [];
             for (var i = 0 ; i < resp.data.data.length ; i ++) {
-                result.push({text:resp.data.data[i].tag, link:"/?tag=" + resp.data.data[i].tag});
+                result.push({text:resp.data.data[i].tag, link:"index.html?tag=" + resp.data.data[i].tag});
             }
             randomTeas.tags = result;
         });

@@ -106,7 +106,6 @@ var articleList = new Vue({
                             temp.id = result[i].id;
                             temp.link = "/blog_detail.html?bid=" + result[i].id;
                             list.push(temp);
-                            console.log(result[i].ctime)
                         }
                         articleList.articleList = list;
                         articleList.page = page;
@@ -130,18 +129,22 @@ var articleList = new Vue({
                         var list = [];
                         for (var i = 0 ; i < result.length ; i ++) {
                             var temp = {};
+                            var datayear = new Date(result[i].ctime).getFullYear();
+                            var datamonth = new Date(result[i].ctime).getMonth() + 1;
+                            var dataday = new Date(result[i].ctime).getDate();
                             temp.title = result[i].title;
                             temp.content = result[i].content;
-                            temp.date = result[i].ctime;
-                            // temp.date = this.tsFormatTime(time,'Y-M-D h:m:s')
+                            temp.year = datayear;
+                            temp.month = datamonth;
+                            temp.day = dataday;
                             temp.views = result[i].views;
                             temp.tags = result[i].tags;
                             temp.id = result[i].id;
                             temp.link = "/blog_detail.html?bid=" + result[i].id;
                             list.push(temp);
-                            // console.log(result[i].ctime)
                         }
                         articleList.articleList = list;
+                        console.log(articleList.articleList )
                         articleList.page = page;
 
                     }).catch(function (resp) {

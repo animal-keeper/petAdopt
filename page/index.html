@@ -38,6 +38,10 @@
                     <a href="/more.html">更多宠物</a>
                     <div class="top-hrs"></div>
                 </li>
+                <li>
+                    <a href="/about.html">关于我</a>
+                    <div class="top-hrs"></div>
+                </li>
             </ul>
             <div class="search_bar">
                 <button><a @click="next">个人中心</a></button>
@@ -80,8 +84,9 @@
                         <!--<img class="article_img" :src="article.img"/>-->
                         <div class="article_right">
                             <a v-bind:href="article.link" class="article_title">{{ article.title }}</a>
-                            <p class="article_content" @click="search">
-                                {{ article.content }}
+                            <p  @click="search">
+                            <div class="article_content" v-html="article.content"></div>
+                                <!--{{ article.content }}-->
                             </p>
                         </div>
                     </div>
@@ -101,7 +106,7 @@
         <div class="content_right">
             <div class="right_moodule" id = "random_tags">
                 <div class="">随机推荐</div>
-                <a v-for="tag in tags" v-bind:style="{color:randomColor(), fontSize:randomSize()}" v-bind:href="tag.link">{{tag.text}}</a>
+                <a v-for="tag in tags" v-bind:style="{color:randomColor(), fontSize:randomSize()}"  v-bind:href="tag.link">{{tag.text}}</a>
             </div>
             <div class="right_moodule" id = "new_hot">
                 <div class="">最近热门</div>

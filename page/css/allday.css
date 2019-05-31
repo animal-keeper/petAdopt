@@ -19,6 +19,7 @@ body{
     height: 3rem;
     background: #d9f8e9;
     opacity: 0.9;
+    top: 0;
 }
 .container{
     position: relative;
